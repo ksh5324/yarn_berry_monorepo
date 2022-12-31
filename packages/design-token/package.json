@@ -1,0 +1,29 @@
+{
+  "name": "@ksh5324/design-token",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksh5324/yarn_berry_monorepo.git",
+    "directory": "packages/design-token"
+  },
+  "main": "./build/index.js",
+  "types": "./build/index.d.js",
+  "publishConfig": {
+    "access": "public",
+    "main": "./build/index.js",
+    "typings": "./build/index.d.ts"
+  },
+  "scripts": {
+    "build:clear": "rm -rf build",
+    "build": "yarn build:clear && tsc && node ./esbuild.config.js"
+  },
+  "sideEffects": false,
+  "author": "ksh5324 <yolly050101@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@yarnpkg/esbuild-plugin-pnp": "^3.0.0-rc.15",
+    "esbuild": "^0.16.12",
+    "esbuild-plugin-inline-image": "^0.0.9"
+  }
+}
